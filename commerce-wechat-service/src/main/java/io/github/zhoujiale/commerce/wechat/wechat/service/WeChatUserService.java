@@ -1,19 +1,19 @@
-package org.github.zhoujiale.commerce.wechat.service;
+package io.github.zhoujiale.commerce.wechat.wechat.service;
 
 import com.alibaba.fastjson2.JSONObject;
+import io.github.zhoujiale.commerce.common.constant.CacheConstant;
+import io.github.zhoujiale.commerce.common.enums.BaseErrorEnum;
+import io.github.zhoujiale.commerce.common.error.ServiceException;
+import io.github.zhoujiale.commerce.wechat.api.model.model.dto.WeChatBase;
+import io.github.zhoujiale.commerce.wechat.api.model.model.dto.WeChatLogin;
+import io.github.zhoujiale.commerce.wechat.api.model.model.dto.WeChatPhoneNumber;
+import io.github.zhoujiale.commerce.wechat.api.model.model.dto.WeChatQrCode;
+import io.github.zhoujiale.commerce.wechat.api.model.model.vo.WeChatLoginResponse;
+import io.github.zhoujiale.commerce.wechat.wechat.constants.WeChatConstant;
+import io.github.zhoujiale.commerce.wechat.wechat.error.WeChatException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.*;
-import org.github.zhoujiale.commerce.common.constant.CacheConstant;
-import org.github.zhoujiale.commerce.common.enums.SystemErrorEnum;
-import org.github.zhoujiale.commerce.common.error.ServiceException;
-import org.github.zhoujiale.commerce.wechat.api.model.dto.WeChatBase;
-import org.github.zhoujiale.commerce.wechat.api.model.dto.WeChatLogin;
-import org.github.zhoujiale.commerce.wechat.api.model.dto.WeChatPhoneNumber;
-import org.github.zhoujiale.commerce.wechat.api.model.dto.WeChatQrCode;
-import org.github.zhoujiale.commerce.wechat.api.model.vo.WeChatLoginResponse;
-import org.github.zhoujiale.commerce.wechat.constants.WeChatConstant;
-import org.github.zhoujiale.commerce.wechat.error.WeChatException;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
@@ -65,12 +65,12 @@ public class WeChatUserService {
             return JSONObject.parseObject(result, WeChatLoginResponse.class);
         } catch (IOException e) {
             log.error(e.getMessage(), e);
-            throw new ServiceException(SystemErrorEnum.REQUEST_ERROR);
+            throw new ServiceException(BaseErrorEnum.REQUEST_ERROR);
         }
     }
 
     /**
-     * 获取收集号
+     * 获取手机号
      **/
     public String getPhoneNumber(WeChatPhoneNumber weChatPhoneNumber) {
         String url = WeChatConstant.PHONE_NUMBER_URL +
@@ -97,7 +97,7 @@ public class WeChatUserService {
             return phoneInfo.getString("phoneNumber");
         } catch (IOException e) {
             log.error(e.getMessage(), e);
-            throw new ServiceException(SystemErrorEnum.REQUEST_ERROR);
+            throw new ServiceException(BaseErrorEnum.REQUEST_ERROR);
         }
     }
 
@@ -135,7 +135,7 @@ public class WeChatUserService {
             return jsonObject.getString(WeChatConstant.ACCESS_TOKEN);
         } catch (IOException e) {
             log.error(e.getMessage(), e);
-            throw new ServiceException(SystemErrorEnum.REQUEST_ERROR);
+            throw new ServiceException(BaseErrorEnum.REQUEST_ERROR);
         }
     }
 
@@ -162,7 +162,7 @@ public class WeChatUserService {
             }
         } catch (IOException e) {
             log.error(e.getMessage(),e);
-            throw new ServiceException(SystemErrorEnum.REQUEST_ERROR);
+            throw new ServiceException(BaseErrorEnum.REQUEST_ERROR);
         }
     }
 

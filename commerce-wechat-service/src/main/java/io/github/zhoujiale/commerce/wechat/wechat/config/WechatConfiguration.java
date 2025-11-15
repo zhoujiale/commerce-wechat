@@ -1,4 +1,4 @@
-package org.github.zhoujiale.commerce.wechat.config;
+package io.github.zhoujiale.commerce.wechat.wechat.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.github.zhoujiale</groupId>
+        <groupId>io.github.zhoujiale</groupId>
         <artifactId>commerce-wechat</artifactId>
         <version>1.0.0</version>
     </parent>
@@ -17,14 +17,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.github.zhoujiale</groupId>
+            <groupId>io.github.zhoujiale</groupId>
             <artifactId>commerce-wechat-api</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>
-            <groupId>org.github.zhoujiale</groupId>
+            <groupId>io.github.zhoujiale</groupId>
             <artifactId>commerce-common</artifactId>
-            <version>1.0.0</version>
+            <version>0.0.1</version>
         </dependency>
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>

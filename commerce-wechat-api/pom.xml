@@ -5,12 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.github.zhoujiale</groupId>
+        <groupId>io.github.zhoujiale</groupId>
         <artifactId>commerce-wechat</artifactId>
         <version>1.0.0</version>
     </parent>
 
-    <groupId>org.github.zhoujiale</groupId>
     <artifactId>commerce-wechat-api</artifactId>
     <version>1.0.0</version>
 

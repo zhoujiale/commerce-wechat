@@ -1,4 +1,4 @@
-package org.github.zhoujiale.commerce.wechat.enums;
+package io.github.zhoujiale.commerce.wechat.wechat.enums;
 
 import lombok.Getter;
 

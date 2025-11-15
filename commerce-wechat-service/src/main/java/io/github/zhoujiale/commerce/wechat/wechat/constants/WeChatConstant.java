@@ -1,4 +1,4 @@
-package org.github.zhoujiale.commerce.wechat.constants;
+package io.github.zhoujiale.commerce.wechat.wechat.constants;
 
 import lombok.Getter;
 

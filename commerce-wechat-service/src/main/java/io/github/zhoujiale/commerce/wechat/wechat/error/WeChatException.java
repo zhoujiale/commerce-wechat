@@ -1,8 +1,8 @@
-package org.github.zhoujiale.commerce.wechat.error;
+package io.github.zhoujiale.commerce.wechat.wechat.error;
 
+import io.github.zhoujiale.commerce.wechat.wechat.enums.WeChatErrorEnum;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.github.zhoujiale.commerce.wechat.enums.WeChatErrorEnum;
 
 @Data
 @EqualsAndHashCode(callSuper = true)

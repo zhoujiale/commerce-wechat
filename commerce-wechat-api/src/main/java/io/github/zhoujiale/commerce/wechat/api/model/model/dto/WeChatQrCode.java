@@ -1,4 +1,4 @@
-package org.github.zhoujiale.commerce.wechat.api.model.dto;
+package io.github.zhoujiale.commerce.wechat.api.model.model.dto;
 
 import com.alibaba.fastjson2.annotation.JSONField;
 import lombok.Data;

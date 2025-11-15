@@ -1,4 +1,4 @@
-package org.github.zhoujiale.commerce.wechat.api.model.dto;
+package io.github.zhoujiale.commerce.wechat.api.model.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
